@@ -1,7 +1,9 @@
 version: '3.1'
 services:
   easyapointments:
-    image: 'easyappointments:1.4.3'
+    build:
+      context: .
+      dockerfile: ./
     environment:
       - BASE_URL=http://localhost
       - DEBUG_MODE=TRUE
